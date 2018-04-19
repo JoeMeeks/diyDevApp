@@ -1,6 +1,6 @@
 {
-  "name": "altDevApp2",
-  "app_id": "",
+  "name": "IonProDev",
+  "app_id": "dcfaa362",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
