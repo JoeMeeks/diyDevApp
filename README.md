@@ -18,6 +18,16 @@ If need to cordova plugins you want to use, just do the  `ionic cordova plugin a
 
 Security: this app uses cordova whitelist plugin v7 and allows you to access ANY webapp/website on the internet to be loaded in the webview container with the cordova plugins enabled. So basically extremely insecure if used improperly.
 
+## iOS Remote Debugging
+* Install [remote-debug-ios-webkit-adapter](https://github.com/JoeMeeks/remotedebug-ios-webkit-adapter)
+* Launch iTunes and plug your device (trust computer if prompted)
+* Run `remotedebug_ios_webkit_adapter --port 9000` OR `npm run debug:ios` from this project root directory
+* Open "chrome://inspect" in the location bar of a Chrome window (replace "http://localhost:9000" with "chrome://inspect" if that autolaunched for you)
+* Ensure "Discover network targets" is enabled in the "chrome://inspect/#devices" window
+* Click the "Configure..." button next to "Discover Network Targets" and add [host_ip_address]:9000
+* Open an app or web page on your USB-connected device
+* Click the "inspect" link under the Target (RemoteDebug iOS Webkit Adapter)
+
 ## How does it work?
 The app does its magic through the following components:
 * Use whitelist plugin to allow cross origin redirects. https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-whitelist/
