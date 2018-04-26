@@ -1,57 +1,53 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      diyDevApp
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>IonProDev</ion-title>
+    </ion-navbar>
 </ion-header>
-
 <ion-content padding>
+    <h1> Found DevApp enabled servers</h1>
+    <ion-list>
+        <button ion-item *ngFor="let host of foundHosts" (click)="clickHost(host)">
+            <h2>{{host.name}}</h2>
+            <h3>{{host.ip}} {{host.port}}</h3>
+            <p>{{host.full_url}}</p>
+        </button>
+        <ion-item *ngIf="foundHosts.length==0">
+            No enabled servers found (yet)
+        </ion-item>
+    </ion-list>
+    <button *ngIf="!isSearching" ion-button full block (click)="searchDevApps()">SEARCH</button>
 
-test2
-  <h1> Found DevApp enabled servers</h1>
-  <ion-list>
-    <ion-item *ngFor="let host of foundHosts" (click)="clickHost(host)">
-      <h2>{{host.name}}</h2>
-      <h3>{{host.ip}} {{host.port}}</h3>
-      <p>{{host.full_url}}</p>
-    </ion-item>
+    <h2>Recently used servers</h2>
+    <ion-list>
+        <button ion-item *ngFor="let host of earlierHosts" (click)="clickHost(host)">
+            <h2>{{host.name}}</h2>
+            <h3>{{host.ip}} {{host.port}}</h3>
+            <p>{{host.full_url}}</p>
+        </button>
+        <ion-item *ngIf="earlierHosts.length==0">
+            No recently used servers found (yet)
+        </ion-item>
+    </ion-list>
 
-    <ion-item *ngIf="foundHosts.length==0">
-      No enabled servers found (yet)
-    </ion-item>
-  </ion-list>
+    <h2>Add your own server</h2>
+    <form #f="ngForm" name="server" action="javascript:void(0)" (ngSubmit)="addServer()">
+        <ion-list>
+            <ion-item>
+                <ion-label fixed>Name</ion-label>
+                <ion-input type="text" [(ngModel)]="customName"></ion-input>
+            </ion-item>
 
-  <h1>Recently used servers</h1>
-  <ion-list>
-    <ion-item *ngFor="let host of earlierHosts" (click)="clickHost(host)">
-      <h2>{{host.name}}</h2>
-      <h3>{{host.ip}} {{host.port}}</h3>
-      <p>{{host.full_url}}</p>
-    </ion-item>
-    <ion-item *ngIf="earlierHosts.length==0">
-      No recently used servers found (yet)
-    </ion-item>  
-  </ion-list>
+            <ion-item>
+                <ion-label fixed>IP</ion-label>
+                <ion-input type="text" [(ngModel)]="customIP"></ion-input>
+            </ion-item>
 
-  <h1>Add your own server</h1>
-  <ion-list>
-    <ion-item>
-      <ion-label fixed>Name</ion-label>
-      <ion-input type="text" [(ngModel)]="customName"></ion-input>
-    </ion-item>
+            <ion-item>
+                <ion-label fixed>Port</ion-label>
+                <ion-input type="text" [(ngModel)]="customPort"></ion-input>
+            </ion-item>
+        </ion-list>
+        <button type="submit" ion-button full>Add host</button>
+    </form>
 
-    <ion-item>
-      <ion-label fixed>IP</ion-label>
-      <ion-input type="text" [(ngModel)]="customIP"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label fixed>Port</ion-label>
-      <ion-input type="text" [(ngModel)]="customPort"></ion-input>
-    </ion-item>
-  </ion-list>
-  <button ion-button (click)="addServer()">Add host</button>
-  <br>
-  <button *ngIf="!isSearching" ion-button full block (click)="searchDevApps()">SEARCH</button>
 </ion-content>

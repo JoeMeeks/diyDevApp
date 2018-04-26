@@ -36,6 +36,7 @@
     "cordova-android-support-gradle-release": "^1.3.0",
     "cordova-clipboard": "^1.1.1",
     "cordova-ios": "4.5.4",
+    "cordova-plugin-appavailability": "^0.4.2",
     "cordova-plugin-badge": "^0.8.7",
     "cordova-plugin-battery-status": "^2.0.2",
     "cordova-plugin-brightness": "^0.2.0",
@@ -96,6 +97,7 @@
         "ANDROID_SUPPORT_VERSION": "24.+"
       },
       "cordova-clipboard": {},
+      "cordova-plugin-appavailability": {},
       "cordova-plugin-badge": {},
       "cordova-plugin-battery-status": {},
       "cordova-plugin-brightness": {},
