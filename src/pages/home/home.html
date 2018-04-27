@@ -34,17 +34,17 @@
         <ion-list>
             <ion-item>
                 <ion-label fixed>Name</ion-label>
-                <ion-input type="text" [(ngModel)]="customName"></ion-input>
+                <ion-input type="text" name="host" [(ngModel)]="customName"></ion-input>
             </ion-item>
 
             <ion-item>
                 <ion-label fixed>IP</ion-label>
-                <ion-input type="text" [(ngModel)]="customIP"></ion-input>
+                <ion-input type="text" name="address" [(ngModel)]="customIP"></ion-input>
             </ion-item>
 
             <ion-item>
                 <ion-label fixed>Port</ion-label>
-                <ion-input type="text" [(ngModel)]="customPort"></ion-input>
+                <ion-input type="text" name="port" pattern="[0-9]*" [(ngModel)]="customPort"></ion-input>
             </ion-item>
         </ion-list>
         <button type="submit" ion-button full>SAVE</button>

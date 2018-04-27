@@ -60,6 +60,7 @@
     "cordova-plugin-inappbrowser": "^3.0.0",
     "cordova-plugin-ionic-keyboard": "^2.0.5",
     "cordova-plugin-ionic-webview": "^1.2.0",
+    "cordova-plugin-keychain-touch-id": "^3.2.1",
     "cordova-plugin-media": "^5.0.2",
     "cordova-plugin-network-information": "^2.0.1",
     "cordova-plugin-pedometer": "^0.4.1",
@@ -116,6 +117,7 @@
       "cordova-plugin-inappbrowser": {},
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-keychain-touch-id": {},
       "cordova-plugin-media": {
         "KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE": "NO"
       },

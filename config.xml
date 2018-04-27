@@ -100,6 +100,7 @@
     <plugin name="cordova-plugin-inappbrowser" spec="^3.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
     <plugin name="cordova-plugin-ionic-webview" spec="^1.2.0" />
+    <plugin name="cordova-plugin-keychain-touch-id" spec="^3.2.1" />
     <plugin name="cordova-plugin-media" spec="^5.0.2">
         <variable name="KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE" value="NO" />
     </plugin>
@@ -121,7 +122,6 @@
         <variable name="ANDROID_FOREGROUND_PUSH" value="false" />
     </plugin>
     <preference name="android-minSdkVersion" value="19" />
-    <preference name="AutoHideSplashScreen" value="false" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="FadeSplashScreenDuration" value="300" />
