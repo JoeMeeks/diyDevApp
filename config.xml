@@ -124,7 +124,7 @@
         <variable name="IOS_FOREGROUND_ALERT_TYPE" value="NONE" />
         <variable name="ANDROID_FOREGROUND_PUSH" value="false" />
     </plugin>
-    <preference name="android-minSdkVersion" value="16" />
+    <preference name="android-minSdkVersion" value="19" />
     <preference name="AutoHideSplashScreen" value="false" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="DisallowOverscroll" value="true" />

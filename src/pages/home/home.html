@@ -4,7 +4,7 @@
     </ion-navbar>
 </ion-header>
 <ion-content padding>
-    <h1> Found DevApp enabled servers</h1>
+    <h1>Found DevApp enabled servers</h1>
     <ion-list>
         <button ion-item *ngFor="let host of foundHosts" (click)="clickHost(host)">
             <h2>{{host.name}}</h2>
@@ -30,7 +30,7 @@
     </ion-list>
 
     <h2>Add your own server</h2>
-    <form #f="ngForm" name="server" action="javascript:void(0)" (ngSubmit)="addServer()">
+    <!--<form #f="ngForm" name="server" action="javascript:void(0)" (ngSubmit)="addServer()">-->
         <ion-list>
             <ion-item>
                 <ion-label fixed>Name</ion-label>
@@ -47,7 +47,8 @@
                 <ion-input type="text" [(ngModel)]="customPort"></ion-input>
             </ion-item>
         </ion-list>
-        <button type="submit" ion-button full>Add host</button>
-    </form>
+        <!--<button type="submit" ion-button full>Add host</button>-->
+        <button ion-button full (click)="addServer()">Add host</button>
+    <!--</form>-->
 
 </ion-content>
