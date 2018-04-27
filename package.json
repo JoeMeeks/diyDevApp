@@ -7,6 +7,7 @@
   "scripts": {
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build --prod",
+    "debug": "start chrome http://localhost:9000 && remotedebug_ios_webkit_adapter --port 9000 & ionic-app-scripts serve -b",
     "lint": "ionic-app-scripts lint",
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve",
