@@ -24,6 +24,7 @@
     "@angular/platform-browser-dynamic": "5.2.9",
     "@ionic-native/core": "4.5.3",
     "@ionic-native/device": "^4.6.0",
+    "@ionic-native/keychain": "^4.7.0",
     "@ionic-native/qr-scanner": "^4.6.0",
     "@ionic-native/splash-screen": "4.5.3",
     "@ionic-native/status-bar": "4.5.3",
@@ -59,6 +60,7 @@
     "cordova-plugin-inappbrowser": "^3.0.0",
     "cordova-plugin-ionic-keyboard": "^2.0.5",
     "cordova-plugin-ionic-webview": "^1.2.0",
+    "cordova-plugin-ios-keychain": "^3.0.1",
     "cordova-plugin-media": "^5.0.2",
     "cordova-plugin-network-information": "^2.0.1",
     "cordova-plugin-pedometer": "^0.4.1",
@@ -116,6 +118,7 @@
       "cordova-plugin-inappbrowser": {},
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-ios-keychain": {},
       "cordova-plugin-media": {
         "KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE": "NO"
       },
@@ -141,7 +144,8 @@
       }
     },
     "platforms": [
-      "ios"
+      "ios",
+      "android"
     ]
   }
 }
