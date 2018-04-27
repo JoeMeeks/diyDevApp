@@ -80,7 +80,6 @@
         <variable name="ANDROID_SUPPORT_VERSION" value="24.+" />
     </plugin>
     <plugin name="cordova-clipboard" spec="^1.1.1" />
-    <plugin name="cordova-plugin-appavailability" spec="^0.4.2" />
     <plugin name="cordova-plugin-badge" spec="^0.8.7" />
     <plugin name="cordova-plugin-battery-status" spec="^2.0.1" />
     <plugin name="cordova-plugin-brightness" spec="^0.2.0" />
