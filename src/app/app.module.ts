@@ -15,27 +15,27 @@ import { IonicStorageModule } from '@ionic/storage';
 
 
 @NgModule({
-  declarations: [
-    MyApp,
-    HomePage
-  ],
-  imports: [
-    BrowserModule,
-    IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot({
-      name: '__mydb',
-         driverOrder: ['indexeddb', 'sqlite', 'websql']
-    })
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    HomePage
-  ],
-  providers: [
-    StatusBar, Device, Vibration,
-    SplashScreen, UDPService,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
-  ]
+    declarations: [
+        MyApp,
+        HomePage
+    ],
+    imports: [
+        BrowserModule,
+        IonicModule.forRoot(MyApp),
+        IonicStorageModule.forRoot({
+            name: '__mydb',
+            driverOrder: ['indexeddb', 'sqlite', 'websql']
+        })
+    ],
+    bootstrap: [IonicApp],
+    entryComponents: [
+        MyApp,
+        HomePage
+    ],
+    providers: [
+        StatusBar, Device, Vibration,
+        SplashScreen, UDPService,
+        { provide: ErrorHandler, useClass: IonicErrorHandler }
+    ]
 })
 export class AppModule { }
